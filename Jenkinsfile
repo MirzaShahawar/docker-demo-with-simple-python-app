@@ -17,10 +17,10 @@ pipeline {
         }
 
         stage('Docker Build') {
-            steps {
+           steps {
                 script {
-                    echo 'Building Docker image...'
-                    sh "docker build -t ${DOCKER_IMAGE_NAME}:latest ."
+                    echo 'Building Docker image with BuildKit...'
+                    sh "DOCKER_BUILDKIT=1 docker build -t ${DOCKER_IMAGE_NAME}:latest ."
                 }
             }
         }
@@ -55,4 +55,3 @@ pipeline {
         }
     }
 }
-
