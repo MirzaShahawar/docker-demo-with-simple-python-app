@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking out code from GitHub...'
-                checkout https://github.com/MirzaShahawar/docker-demo-with-simple-python-app.git
+                git branch: 'master', url: 'https://github.com/MirzaShahawar/docker-demo-with-simple-python-app.git'
             }
         }
 
