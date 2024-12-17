@@ -5,7 +5,7 @@ pipeline {
         DOCKER_IMAGE_NAME = 'my-python-app'
         DEPLOY_CONTAINER_NAME = 'python-app-container'
         APP_PORT = '5000'
-        DEPLOY_PORT = '8080'
+        DEPLOY_PORT = '8000'
     }
 
     stages {
